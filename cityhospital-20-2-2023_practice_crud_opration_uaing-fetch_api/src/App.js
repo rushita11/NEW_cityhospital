@@ -24,6 +24,7 @@ import { configureStore } from "./redux/store";
 import { Provider } from "react-redux";
 import Counter from "./container/Counter";
 import Employee from "./admin/Container/Employee/Employee";
+import { ThemeProvider } from "@emotion/react";
 function App() {
   const store = configureStore();
 
@@ -42,15 +43,30 @@ function App() {
         <PrivateRoute exact path={"/medicin"} component={Medicin} />
       </Switch>
       <Footer /> */}
+      <ThemeProvider>
       <Provider store={store}>
-        <Layout>
+        {/* <Layout>
           <Switch>
             <Route exact path={"/medicins"} component={Medicins} />
             <Route exact path={"/doctor"} component={Do} />
             <Route exact path={"/employee"} component={Employee} />
           </Switch>
-        </Layout>
+        </Layout> */}
+           <Header />
+      <Switch>
+        <PublicRoute exact path={"/forgetpass"} restricted={true} component={Forgetpass} />
+        <PublicRoute exact path={"/"} component={Home} />
+        <PublicRoute exact path={"/about"} component={About} />
+        <PublicRoute exact path={"/doctor"} component={Doctor} />
+        <PublicRoute exact path={"/contact"} component={Contact} />
+        <PublicRoute exact path={"/department"} component={Department} />
+        <PublicRoute exact path={"/signup"} restricted={true} component={Signup} />
+        <PublicRoute exact path={"/login"} restricted={true} component={Login} />
+        <PrivateRoute exact path={"/medicin"} component={Medicin} />
+      </Switch>
+      <Footer />
       </Provider>
+      </ThemeProvider>
     </>
   );
 }
