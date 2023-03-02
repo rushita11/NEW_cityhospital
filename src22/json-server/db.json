@@ -1,0 +1,43 @@
+{
+  "medicines": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 2,
+      "name": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": 3,
+      "name": "json-server",
+      "author": "typicode"
+    },
+    {
+      "name": "A",
+      "price": 8,
+      "quantity": 5,
+      "expiry": "2025",
+      "id": 4
+    },
+    {
+      "name": "X",
+      "price": 8,
+      "quantity": 5,
+      "expiry": "2028",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "medicines": [
+    {
+      "name": "rt",
+      "price": 23,
+      "quantity": 354,
+      "expiry": "2023",
+      "id": 4
+    },
+    {
+      "name": "rt",
+      "price": 343,
+      "quantity": 23,
+      "expiry": "2025",
+      "id": 5
+    },
+    {
+      "name": "rt",
+      "price": 45,
+      "quantity": 234,
+      "expiry": "2024",
+      "id": 6
+    },
+    {
+      "name": "rt",
+      "price": 34,
+      "quantity": 23,
+      "expiry": "2024",
+      "id": 7
+    }
+  ],
+  "employee": [
+    {
+      "name": "rttt",
+      "email": "rt@gmail.com",
+      "age": 54,
+      "id": 1
+    },
+    {
+      "name": "rt",
+      "email": "err@gmail.com",
+      "age": 4,
+      "id": 2
+    },
+    {
+      "name": "we",
+      "email": "err@gmail.com",
+      "age": 34,
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
