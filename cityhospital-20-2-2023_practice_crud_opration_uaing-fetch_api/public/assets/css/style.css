@@ -1902,3 +1902,27 @@ padding: 10px;
   align-items: center;
   justify-content: center;
 }
+
+.main-header.dark #header{
+  background-color: black;
+  transition: ease 0.2s all;
+} 
+.main-header.dark  #header .logo{
+color: white;
+transition: ease 0.2s all;
+}
+.main-header.dark  #header h2{
+  color: white;
+  transition: ease 0.2s all;
+}
+.main-header.dark  #header  .navbar a {
+color: white;
+transition: ease 0.2s all;
+}
+.theme_button{
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 5px 15px;
+  background: #FF6337; 
+}

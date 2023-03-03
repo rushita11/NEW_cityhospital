@@ -18,8 +18,8 @@ import { addEmployeeData, deleteEmployee, getEmployeeData, updateEmployee } from
 function Employee(props) {
     const [open, setOpen] = React.useState(false);
     const [Eid, setEid] = useState();
-    // const[Dopen, setDopen] = useState();
-    // const [dId, setDId] = useState();
+    const[Dopen, setDOpen] = useState();
+    const [dId, setDId] = useState();
 
     const handleClickOpen = () => {
         setOpen(true);
@@ -55,7 +55,7 @@ function Employee(props) {
                     <>
                         <IconButton aria-label="delete">
                             <DeleteIcon
-                            //  onClick= {() => {setDId(params.row.id); setDopen(true)}}
+                             onClick= {() => {setDId(params.row.id); setDOpen(true)}}
                              />
                         </IconButton>
                         <IconButton aria-label="delete" >
@@ -104,14 +104,15 @@ function Employee(props) {
     const handleDelete = () => {
         dispatch(deleteEmployee());
         handleClose();
-        // setDId();
+        setDId();
+        setDOpen(false);
     }
-    // const handleDClose = () => {
-    //     setDOpen(false);
-    // };
+    const handleDClose = () => {
+        setDOpen(false);
+    };
     return (
         <>
-          {/* <Dialog
+          <Dialog
                 open={Dopen}
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
@@ -128,7 +129,7 @@ function Employee(props) {
                         Agree
                     </Button>
                 </DialogActions>
-            </Dialog> */}
+            </Dialog>
             <div className='d-flex justify-content-between'>
                 <h1>Employee</h1>
                 <Button className='appointment-btn' variant="contained" onClick={() => setOpen(true)}>Contained</Button>

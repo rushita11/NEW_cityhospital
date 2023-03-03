@@ -1,6 +1,7 @@
 
 import { addEmployee, fetchAllemployee } from '../../Common/apis/employee.api';
 import * as ActionType from '../ActionType'
+
 export const getEmployeeData = () => (dispatch) => {
     try {
         //     fetch('http://localhost:3007/employee')
@@ -8,7 +9,7 @@ export const getEmployeeData = () => (dispatch) => {
         //         .then((data) => dispatch({ type: ActionType.EMPLOYEE_GET, payload: data }))
         // }
         fetchAllemployee()
-            .then((response) => console.log(response.data))
+            .then((response) => dispatch({ type: ActionType.EMPLOYEE_GET, payload: response.data }))
         // .catch((error) => dispatch(errorMedicine(error.message)));
     }
     catch (error) {

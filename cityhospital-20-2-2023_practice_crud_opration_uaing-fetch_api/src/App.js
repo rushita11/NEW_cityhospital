@@ -24,48 +24,37 @@ import { configureStore } from "./redux/store";
 import { Provider } from "react-redux";
 import Counter from "./container/Counter";
 import Employee from "./admin/Container/Employee/Employee";
-import { ThemeProvider } from "@emotion/react";
+import { ThemeProvider } from "./redux/context/TheneContext";
+
 function App() {
   const store = configureStore();
 
   return (
     <>
-      {/* <Header />
-      <Switch>
-        <PublicRoute exact path={"/forgetpass"} restricted={true} component={Forgetpass} />
-        <PublicRoute exact path={"/"} component={Home} />
-        <PublicRoute exact path={"/about"} component={About} />
-        <PublicRoute exact path={"/doctor"} component={Doctor} />
-        <PublicRoute exact path={"/contact"} component={Contact} />
-        <PublicRoute exact path={"/department"} component={Department} />
-        <PublicRoute exact path={"/signup"} restricted={true} component={Signup} />
-        <PublicRoute exact path={"/login"} restricted={true} component={Login} />
-        <PrivateRoute exact path={"/medicin"} component={Medicin} />
-      </Switch>
-      <Footer /> */}
+
       <ThemeProvider>
-      <Provider store={store}>
-        {/* <Layout>
+        <Provider store={store}>
+          <Layout>
           <Switch>
             <Route exact path={"/medicins"} component={Medicins} />
             <Route exact path={"/doctor"} component={Do} />
             <Route exact path={"/employee"} component={Employee} />
           </Switch>
-        </Layout> */}
-           <Header />
-      <Switch>
-        <PublicRoute exact path={"/forgetpass"} restricted={true} component={Forgetpass} />
-        <PublicRoute exact path={"/"} component={Home} />
-        <PublicRoute exact path={"/about"} component={About} />
-        <PublicRoute exact path={"/doctor"} component={Doctor} />
-        <PublicRoute exact path={"/contact"} component={Contact} />
-        <PublicRoute exact path={"/department"} component={Department} />
-        <PublicRoute exact path={"/signup"} restricted={true} component={Signup} />
-        <PublicRoute exact path={"/login"} restricted={true} component={Login} />
-        <PrivateRoute exact path={"/medicin"} component={Medicin} />
-      </Switch>
-      <Footer />
-      </Provider>
+        </Layout>
+          {/* <Header />
+          <Switch>
+            <PublicRoute exact path={"/forgetpass"} restricted={true} component={Forgetpass} />
+            <PublicRoute exact path={"/"} component={Home} />
+            <PublicRoute exact path={"/about"} component={About} />
+            <PublicRoute exact path={"/doctor"} component={Doctor} />
+            <PublicRoute exact path={"/contact"} component={Contact} />
+            <PublicRoute exact path={"/department"} component={Department} />
+            <PublicRoute exact path={"/signup"} restricted={true} component={Signup} />
+            <PublicRoute exact path={"/login"} restricted={true} component={Login} />
+            <PrivateRoute exact path={"/medicin"} component={Medicin} />
+          </Switch>
+          <Footer /> */}
+        </Provider>
       </ThemeProvider>
     </>
   );
