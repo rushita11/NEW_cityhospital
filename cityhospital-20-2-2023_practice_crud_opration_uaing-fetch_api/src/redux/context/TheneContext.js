@@ -10,11 +10,11 @@ const initialstate = {
 }
 
 export const ThemeProvider = ({ children }) => {
-    console.log("theme provider");
+    // console.log("theme provider");
     const [ state, dispatch ] = useReducer(themeReducer, initialstate);
 
     const toggle_theme = (themeval) => {
-        console.log(themeval);
+        // console.log(themeval);
         const newTheme = themeval === "light" ? "dark" : "light";
         dispatch({ type: ActionType.THEME_TOGGLE, payload: newTheme })
     }

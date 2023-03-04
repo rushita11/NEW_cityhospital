@@ -2,13 +2,6 @@
   "medicines": [
     {
       "name": "rt",
-      "price": 23,
-      "quantity": 354,
-      "expiry": "2023",
-      "id": 4
-    },
-    {
-      "name": "rt",
       "price": 343,
       "quantity": 23,
       "expiry": "2025",
@@ -31,24 +24,6 @@
   ],
   "employee": [
     {
-      "name": "rttt",
-      "email": "rt@gmail.com",
-      "age": 54,
-      "id": 1
-    },
-    {
-      "name": "rt",
-      "email": "err@gmail.com",
-      "age": 4,
-      "id": 2
-    },
-    {
-      "name": "we",
-      "email": "err@gmail.com",
-      "age": 34,
-      "id": 3
-    },
-    {
       "name": "A",
       "email": "kathrotiyaharsh10@gmail.com",
       "age": 53,
@@ -65,6 +40,12 @@
       "email": "dfvdf@fgg.sd",
       "age": 45,
       "id": 6
+    },
+    {
+      "name": "ERr",
+      "email": "meetmistry7007@gmail.com",
+      "age": 56,
+      "id": 7
     }
   ],
   "comments": [

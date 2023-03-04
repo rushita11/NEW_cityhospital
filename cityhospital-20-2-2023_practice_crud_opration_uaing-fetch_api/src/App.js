@@ -25,6 +25,7 @@ import { Provider } from "react-redux";
 import Counter from "./container/Counter";
 import Employee from "./admin/Container/Employee/Employee";
 import { ThemeProvider } from "./redux/context/TheneContext";
+import Patient from "./admin/Container/Patient/Patient";
 
 function App() {
   const store = configureStore();
@@ -39,6 +40,7 @@ function App() {
             <Route exact path={"/medicins"} component={Medicins} />
             <Route exact path={"/doctor"} component={Do} />
             <Route exact path={"/employee"} component={Employee} />
+            <Route exact path={"/patient"} component={Patient} />
           </Switch>
         </Layout>
           {/* <Header />

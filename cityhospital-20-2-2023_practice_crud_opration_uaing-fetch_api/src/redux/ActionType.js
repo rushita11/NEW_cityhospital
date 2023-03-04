@@ -15,4 +15,6 @@ export const EMPLOYEE_UPDATE = "EMPLOYEE_UPDATE"
 export const EMPLOYEE_DELETE = "EMPLOYEE_DELETE"
 
 
+export const PATIENT_GET = "PATIENT_GET"
+
 export const THEME_TOGGLE = "THEME_TOGGLE"

@@ -7,7 +7,7 @@ const initialState = {
 }
 
 export const employeeReducer = (state = initialState, action) => {
-    console.log(state, action)
+    // console.log(state, action)
     switch (action.type) {
         case ActionType.EMPLOYEE_GET:
             return {

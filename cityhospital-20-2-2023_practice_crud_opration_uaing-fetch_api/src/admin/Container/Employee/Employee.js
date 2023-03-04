@@ -18,7 +18,7 @@ import { addEmployeeData, deleteEmployee, getEmployeeData, updateEmployee } from
 function Employee(props) {
     const [open, setOpen] = React.useState(false);
     const [Eid, setEid] = useState();
-    const[Dopen, setDOpen] = useState();
+    const [Dopen, setDOpen] = useState();
     const [dId, setDId] = useState();
 
     const handleClickOpen = () => {
@@ -35,13 +35,16 @@ function Employee(props) {
     useEffect(() => {
         dispatch(getEmployeeData())
     }, [])
+
     const StoreData = (values) => {
         // addEmployeeData
         dispatch(addEmployeeData(values));
     }
+    
     const handleUpdateData = (values) => {
         dispatch(updateEmployee(values))
     }
+
     const columns = [
         { field: 'id', headerName: 'ID', width: 70 },
         { field: 'name', headerName: 'Name', width: 130 },
@@ -55,23 +58,25 @@ function Employee(props) {
                     <>
                         <IconButton aria-label="delete">
                             <DeleteIcon
-                             onClick= {() => {setDId(params.row.id); setDOpen(true)}}
-                             />
+                                onClick={() => { setDId(params.row.id); setDOpen(true) }}
+                            />
                         </IconButton>
                         <IconButton aria-label="delete" >
-                            <EditIcon onClick={() => { handleUpdate(params.row) }}/>
+                            <EditIcon onClick={() => { handleUpdate(params.row) }} />
                         </IconButton>
                     </>
                 )
             }
-        } 
+        }
     ];
+
     let schema = yup.object().shape({
         name: yup.string().matches(/^[A-Za-z ]*$/, 'Please enter valid name')
             .max(40).required("Name is required Field"),
         email: yup.string().matches(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/, "please enter valid email").required("Email is required"),
         age: yup.string().required("age is required Field")
     });
+
     const formik = useFormik({
         initialValues: {
             name: "",
@@ -101,18 +106,21 @@ function Employee(props) {
         setValues(value);
         setEid(value)
     }
+
     const handleDelete = () => {
-        dispatch(deleteEmployee());
+        dispatch(deleteEmployee(dId));
         handleClose();
         setDId();
         setDOpen(false);
     }
+
     const handleDClose = () => {
         setDOpen(false);
     };
+
     return (
         <>
-          <Dialog
+            <Dialog
                 open={Dopen}
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
@@ -137,9 +145,9 @@ function Employee(props) {
                 <Dialog open={open} onClose={handleClose}>
                     <Formik values={formik}>
                         <Form className="php-email-form" onSubmit={handleSubmit}>
-                        { 
-                         Eid ?  <DialogTitle>Update data</DialogTitle> : <DialogTitle>Add Data</DialogTitle> 
-                         }
+                            {
+                                Eid ? <DialogTitle>Update data</DialogTitle> : <DialogTitle>Add Data</DialogTitle>
+                            }
                             <DialogContent>
                                 {/* <DialogContentText>
                                 
